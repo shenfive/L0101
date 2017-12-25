@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //由UI拉進來的元件
     @IBOutlet weak var number1: UITextField!
     @IBOutlet weak var number2: UITextField!
     @IBOutlet weak var answer: UILabel!
 
+    //按下＋按鈕的動作
     @IBAction func addAction(_ sender: Any) {
         if let a = Int(number1.text!),
             let b = Int(number2.text!){
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
             answer.text = "輸入錯誤"
         }
     }
+    //延伸練習，做加減乘除的按鈕
 
 
 }
