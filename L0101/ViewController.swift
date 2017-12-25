@@ -10,14 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    @IBOutlet weak var number1: UITextField!
+    @IBOutlet weak var number2: UITextField!
+    @IBOutlet weak var answer: UILabel!
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func addAction(_ sender: Any) {
+        if let a = Int(number1.text!),
+            let b = Int(number2.text!){
+            answer.text = "答案：\(a + b)"
+        }else{
+            answer.text = "輸入錯誤"
+        }
     }
 
 
